@@ -1,10 +1,9 @@
 // Find second largest number in an array
 
 
+// console.log(secondLargest(numbers)); => 10
 
-// console.log(secondLargest(numbers)); => 88
-
-const numbers = [1, 5, 3, 39, 88, 67, 109, 66];
+const numbers = [10, 20, 8, 9, 3, 5, 20];
 
 const  secondLargest = (arr) => {
     let largest = -Infinity;
@@ -15,6 +14,10 @@ const  secondLargest = (arr) => {
         {
             secondLargest = largest;
             largest = arr[i];
+        }
+        else if(secondLargest < arr[i] && arr[i] != largest)
+        {
+            secondLargest = arr[i];
         }
     }
     return secondLargest;
